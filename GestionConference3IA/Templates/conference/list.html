@@ -1,0 +1,23 @@
+<h1>La liste des conferences</h1>
+<a href="{% url 'conference_add' %}">Ajouter une nouvelle conférence</a>
+<br><br>
+<table border="1">
+    <tr>
+        <td>Title</td>
+        <td>Theme</td>
+        <td>Date de conference</td>
+        <td>Actions</td>
+    </tr>
+    {% for c in liste %}
+    <tr>
+        <td>{{c.name}}</td>
+        <td>{{c.theme}}</td>
+        <td>{{c.date_debut}} - {{c.date_fin}}</td>
+        <td>
+            <a href="{% url 'conference_detail' c.pk %}">Details</a> | 
+            <a href="{% url 'conference_update' c.pk %}">Update</a> | 
+            <a href="{% url 'conference_delete' c.pk %}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
