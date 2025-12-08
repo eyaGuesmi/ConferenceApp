@@ -6,7 +6,12 @@
     <nav>
         <a>Home</a>
         <a href="{% url 'liste_conferences' %}">Conférences</a>
+<<<<<<< HEAD
         <a href="{% url 'list_submissions' %}">Submissions</a>
+=======
+                <a href="{%url 'submission_list' %}">submission</a>
+
+>>>>>>> df5daa56f74cd80f69add844502b78735ab8bc6a
         <a>Contact</a>
         {% if user.is_authenticated %}
          <a> {{user.username}}</a>

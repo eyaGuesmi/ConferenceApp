@@ -1,5 +1,9 @@
 from django import forms
+<<<<<<< HEAD
 from .models import Conference, Submission
+=======
+from .models import Conference,Submission
+>>>>>>> df5daa56f74cd80f69add844502b78735ab8bc6a
 
 class ConferenceForm(forms.ModelForm):
     class Meta:
@@ -26,6 +30,7 @@ class ConferenceForm(forms.ModelForm):
                 }
             )
         }
+<<<<<<< HEAD
 #to add for homework 10
 # Formulaire pour Conference
 class ConferenceForm(forms.ModelForm):
@@ -48,3 +53,9 @@ class SubmissionForm(forms.ModelForm):
     class Meta:
         model = Submission
         fields = ['title', 'abstract', 'keywords', 'paper', 'conference']
+=======
+class SubmissionForm(forms.ModelForm):
+    class Meta:
+        model = Submission
+        fields = ['title', 'abstract', 'keywords', 'paper', 'Conference', 'payed','status']  
+>>>>>>> df5daa56f74cd80f69add844502b78735ab8bc6a

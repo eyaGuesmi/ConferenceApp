@@ -16,4 +16,8 @@ def register(req):
 
 def logout_view(req):
     logout(req)
+<<<<<<< HEAD
     return redirect("login")
+=======
+    return redirect("login")
+>>>>>>> df5daa56f74cd80f69add844502b78735ab8bc6a

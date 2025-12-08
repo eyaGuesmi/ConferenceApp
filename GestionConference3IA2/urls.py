@@ -17,12 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path ,include
 from django.views.generic import RedirectView
+<<<<<<< HEAD
 
+=======
+>>>>>>> df5daa56f74cd80f69add844502b78735ab8bc6a
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",RedirectView.as_view(url="conferences/liste/")),
     path('conferences/',include("ConferenceApp.urls")),
+<<<<<<< HEAD
     path('user/',include("UserApp.urls")),
     path('api/',include("sessionAppApi.urls")),
     path('security/',include("securityConfigApp.urls")),
 ]
+=======
+    path('user/',include("UserApp.urls"))
+]
+>>>>>>> df5daa56f74cd80f69add844502b78735ab8bc6a
